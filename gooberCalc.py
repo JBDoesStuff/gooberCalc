@@ -1,3 +1,5 @@
+import time
+
 def print_result(result):
     if result == 69:
         print()
@@ -13,6 +15,7 @@ def print_result(result):
         print()
         print("ERR 642: TOO MUCH COMEDY")
         print("MAYBE DON'T TRY TO BE FUNNY")
+        time.sleep(5)
         quit()
     elif result == [8008, 80085, 58008, 5318008, 8008135]:
         print()
@@ -28,6 +31,7 @@ def print_result(result):
         print()
         print("ERR 999: INTERNAL OVERFLOW")
         print("TRY TO NOT CALCULATE THE NUMBER OF ATOMS IN THE UNIVERSE")
+        time.sleep(5)
         quit()
     elif result >= 1000000000000 or result <= -1000000000000:
         print()
@@ -56,13 +60,13 @@ def print_result(result):
         print(result)
         print("NUMBER 29, NATHAN MACKINNON!")
         print()
-    elif result <= 0.00000000000000000001 or result >= -0.00000000000000000001 and result != 0:
-        print()
+    elif abs(result) <= 0.00000000000000000001 and result != 0:
         print(result)
         print("ERR 000: REALLY SMALL NUMBER")
         print("DON'T TRY TO DO QUANTUM MECHANICS WITH THIS CALCULATOR")
+        time.sleep(5)
         quit()
-    elif result <= 0.00000000001 or result >= -0.00000000001 and result != 0:
+    elif abs(result) <= 0.00000000001 and result != 0:
         print()
         print(result)
         print("That's a really small number.")
@@ -104,6 +108,7 @@ while True:
             print()
             print("ERR 010: ADDING ZERO")
             print("WHY WOULD YOU DO THAT?")
+            time.sleep(5)
             quit()
         result = value1 + value2
         print_result(result)
@@ -116,6 +121,7 @@ while True:
             print()
             print("ERR 020: SUBTRACTING ZERO")
             print("WHY WOULD YOU DO THAT?")
+            time.sleep(5)
             quit()
         print_result(result)
     elif operation == "3":
@@ -145,12 +151,14 @@ while True:
             print("WOW, REAL CREATIVE")
             print()
             print("WAIT... IS THE ANSWER 1?")
+            time.sleep(5)
             quit()
         elif value2 == 0:
             print()
             print("ERR 040: DIVISION BY ZERO")
             print("YOU CAN'T DIVIDE BY ZERO")
             print("DON'T YOU KNOW THAT?")
+            time.sleep(5)
             quit()
         elif value1 == 0:
             print()
